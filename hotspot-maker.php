@@ -1,5 +1,3 @@
-define('HOTSPOT_MAKER_PATH', plugin_dir_path(__FILE__));
-define('HOTSPOT_MAKER_URL', plugin_dir_url(__FILE__));
 <?php
 /**
  * Plugin Name: Hotspot Maker
