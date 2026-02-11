@@ -27,7 +27,7 @@ define('HOTSPOT_MAKER_URL', plugin_dir_url(__FILE__));
 /**
  * Load the admin code for managing hotspots in the WordPress dashboard.
  */
-require_once HOTSPOT_MAKER_PATH . 'admin/admin.php';
+require_once HOTSPOT_MAKER_PATH . 'includes/admin.php';
 
 /**
  * Add the plugin's CSS file to the website's frontend.
@@ -36,7 +36,7 @@ require_once HOTSPOT_MAKER_PATH . 'admin/admin.php';
 add_action('wp_enqueue_scripts', function () {
     wp_enqueue_style(
         'hotspot-maker-style', // Unique name for the style
-        HOTSPOT_MAKER_URL . 'public/style.css', // Path to the CSS file
+        HOTSPOT_MAKER_URL . 'assets/style.css', // Path to the CSS file
         [], // No dependencies
         '1.0' // Version number
     );
