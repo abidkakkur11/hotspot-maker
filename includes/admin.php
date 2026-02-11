@@ -90,6 +90,7 @@ function hotspot_meta_callback($post) {
                 <input type="number" name="hotspot_y[]" placeholder="Y (%)" style="width:80px;">
                 <input type="text" name="hotspot_title[]" placeholder="Title" style="width:150px;">
                 <input type="text" name="hotspot_text[]" placeholder="Description" style="width:300px;">
+                <input type="text" name="hotspot_icon[]" placeholder="Icon Image URL" style="width:250px;">
             </div>
 
         <?php endif; ?>
