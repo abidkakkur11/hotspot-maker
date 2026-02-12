@@ -90,7 +90,6 @@ function hotspot_meta_callback($post) {
                 <input type="number" name="hotspot_y[]" placeholder="Y (%)" style="width:80px;">
                 <input type="text" name="hotspot_title[]" placeholder="Title" style="width:150px;">
                 <input type="text" name="hotspot_text[]" placeholder="Description" style="width:300px;">
-                <input type="text" name="hotspot_icon[]" placeholder="Icon Image URL" style="width:250px;">
             </div>
 
         <?php endif; ?>
@@ -98,10 +97,36 @@ function hotspot_meta_callback($post) {
     </div>
     <!-- Button to add more hotspots -->
     <button type="button" class="button" id="add-hotspot">Add Hotspot</button>
+    <h4>Click <a href="#publish"> Update / Publish </a> Button to See the Preview</h4>ṭ
 
     <p><small>X and Y values should be between 0–100 (percentage based positioning).</small></p>
-
     <?php
+    if ($image && !empty($spots)) {
+    ?>
+    <hr>
+    <h3>Preview</h3>
+
+    <div style="position:relative;display:inline-block;max-width:100%;">
+        <img src="<?php echo esc_url($image); ?>"
+             style="max-width:100%;display:block;border:1px solid #ddd;">
+
+
+        <?php foreach ($spots as $spot): ?>
+             <div style="
+                position:absolute;
+                top:<?php echo esc_attr($spot['y']); ?>%;
+                left:<?php echo esc_attr($spot['x']); ?>%;
+                transform:translate(-50%,-50%);
+            ">
+            <?php if (!empty($spot['icon'])) : ?>
+                <img src="<?php echo esc_url($spot['icon']); ?>">
+        <?php endif; ?>
+        </div>
+        <?php endforeach; ?>
+    </div>
+    <?php
+}
+
 }
 
 /**
