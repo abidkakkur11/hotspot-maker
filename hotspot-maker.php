@@ -3,7 +3,7 @@
  * Plugin Name: Hotspot Maker
  * Plugin URI: https://abidkp.com
  * Description: A plugin to create interactive hotspots on images
- * Version: 1.0.0
+ * Version: 1.0.1
  * Author: Abid KP
  * Author URI: https://abidkp.com
  * License: GPL v2 or later

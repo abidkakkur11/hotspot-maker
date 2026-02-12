@@ -90,6 +90,7 @@ function hotspot_meta_callback($post) {
                 <input type="number" name="hotspot_y[]" placeholder="Y (%)" style="width:80px;">
                 <input type="text" name="hotspot_title[]" placeholder="Title" style="width:150px;">
                 <input type="text" name="hotspot_text[]" placeholder="Description" style="width:300px;">
+                <input type="text" name="hotspot_icon[]" placeholder="Icon Image URL" style="width:250px;">
             </div>
 
         <?php endif; ?>
@@ -97,7 +98,7 @@ function hotspot_meta_callback($post) {
     </div>
     <!-- Button to add more hotspots -->
     <button type="button" class="button" id="add-hotspot">Add Hotspot</button>
-    <h4>Click <a href="#publish"> Update / Publish </a> Button to See the Preview</h4>ṭ
+    <h4>Click <a href="#publish"> Update / Publish </a> Button to See the Preview</h4>
 
     <p><small>X and Y values should be between 0–100 (percentage based positioning).</small></p>
     <?php
